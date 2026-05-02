@@ -1,0 +1,2476 @@
+{
+  "meta": {
+    "season": "2025-26",
+    "gameweek": 34,
+    "run_time_seconds": 30.6
+  },
+  "validation": {
+    "auc": 0.9523,
+    "brier": 0.0663,
+    "calibration": {
+      "frac_pos": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.037037037037037035,
+        0.07142857142857142,
+        0.48148148148148145,
+        0.7142857142857143
+      ],
+      "mean_pred": [
+        0.0,
+        0.0038529411764705885,
+        0.015607142857142858,
+        0.03665925925925925,
+        0.07886296296296297,
+        0.16663571428571428,
+        0.3776037037037036,
+        0.8087749999999998
+      ]
+    },
+    "per_season_auc": {
+      "2015-16": 0.9219,
+      "2016-17": 0.9412,
+      "2017-18": 0.7812,
+      "2018-19": 0.9412,
+      "2019-20": 0.9733,
+      "2020-21": 1.0,
+      "2021-22": 1.0,
+      "2022-23": 0.9804,
+      "2023-24": 1.0,
+      "2024-25": 0.9216,
+      "2025-26": 1.0
+    },
+    "walk_forward_predictions": [
+      {
+        "season": "2015-16",
+        "team": "Leicester",
+        "relegated": 0,
+        "ensemble": 0.0541,
+        "logistic": 0.0,
+        "rf": 0.0351,
+        "gbm": 0.1274
+      },
+      {
+        "season": "2015-16",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0148,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0444
+      },
+      {
+        "season": "2015-16",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.0148,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0444
+      },
+      {
+        "season": "2015-16",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0369,
+        "logistic": 0.0187,
+        "rf": 0.0,
+        "gbm": 0.0921
+      },
+      {
+        "season": "2015-16",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0424,
+        "logistic": 0.0,
+        "rf": 0.0351,
+        "gbm": 0.0921
+      },
+      {
+        "season": "2015-16",
+        "team": "Southampton",
+        "relegated": 0,
+        "ensemble": 0.0148,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0444
+      },
+      {
+        "season": "2015-16",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.077,
+        "logistic": 0.0513,
+        "rf": 0.0877,
+        "gbm": 0.0921
+      },
+      {
+        "season": "2015-16",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0653,
+        "logistic": 0.0513,
+        "rf": 0.0526,
+        "gbm": 0.0921
+      },
+      {
+        "season": "2015-16",
+        "team": "Stoke",
+        "relegated": 0,
+        "ensemble": 0.1695,
+        "logistic": 0.0,
+        "rf": 0.2142,
+        "gbm": 0.2944
+      },
+      {
+        "season": "2015-16",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0653,
+        "logistic": 0.0513,
+        "rf": 0.0526,
+        "gbm": 0.0921
+      },
+      {
+        "season": "2015-16",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.6712,
+        "logistic": 0.5503,
+        "rf": 1.0,
+        "gbm": 0.4633
+      },
+      {
+        "season": "2015-16",
+        "team": "Swansea",
+        "relegated": 0,
+        "ensemble": 0.0497,
+        "logistic": 0.0,
+        "rf": 0.0351,
+        "gbm": 0.1141
+      },
+      {
+        "season": "2015-16",
+        "team": "Watford",
+        "relegated": 0,
+        "ensemble": 0.1601,
+        "logistic": 0.0,
+        "rf": 0.3526,
+        "gbm": 0.1278
+      },
+      {
+        "season": "2015-16",
+        "team": "West Brom",
+        "relegated": 0,
+        "ensemble": 0.0265,
+        "logistic": 0.0,
+        "rf": 0.0351,
+        "gbm": 0.0444
+      },
+      {
+        "season": "2015-16",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.1215,
+        "logistic": 0.1846,
+        "rf": 0.0877,
+        "gbm": 0.0921
+      },
+      {
+        "season": "2015-16",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.8342,
+        "logistic": 0.9248,
+        "rf": 0.8,
+        "gbm": 0.7778
+      },
+      {
+        "season": "2015-16",
+        "team": "Sunderland",
+        "relegated": 1,
+        "ensemble": 0.7606,
+        "logistic": 0.8791,
+        "rf": 0.7916,
+        "gbm": 0.6111
+      },
+      {
+        "season": "2015-16",
+        "team": "Norwich",
+        "relegated": 1,
+        "ensemble": 0.4249,
+        "logistic": 0.8048,
+        "rf": 0.2193,
+        "gbm": 0.2507
+      },
+      {
+        "season": "2015-16",
+        "team": "Newcastle",
+        "relegated": 1,
+        "ensemble": 0.4797,
+        "logistic": 0.6575,
+        "rf": 0.386,
+        "gbm": 0.3956
+      },
+      {
+        "season": "2015-16",
+        "team": "Aston Villa",
+        "relegated": 1,
+        "ensemble": 0.8864,
+        "logistic": 0.9906,
+        "rf": 1.0,
+        "gbm": 0.6686
+      },
+      {
+        "season": "2016-17",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0101,
+        "logistic": 0.0,
+        "rf": 0.0303,
+        "gbm": 0.0
+      },
+      {
+        "season": "2016-17",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2016-17",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0069,
+        "logistic": 0.0,
+        "rf": 0.0208,
+        "gbm": 0.0
+      },
+      {
+        "season": "2016-17",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0667,
+        "logistic": 0.037,
+        "rf": 0.0511,
+        "gbm": 0.1118
+      },
+      {
+        "season": "2016-17",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0404,
+        "logistic": 0.0,
+        "rf": 0.0511,
+        "gbm": 0.0702
+      },
+      {
+        "season": "2016-17",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2016-17",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.0504,
+        "logistic": 0.037,
+        "rf": 0.0025,
+        "gbm": 0.1118
+      },
+      {
+        "season": "2016-17",
+        "team": "Southampton",
+        "relegated": 0,
+        "ensemble": 0.0411,
+        "logistic": 0.0,
+        "rf": 0.0579,
+        "gbm": 0.0653
+      },
+      {
+        "season": "2016-17",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.0123,
+        "logistic": 0.037,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2016-17",
+        "team": "West Brom",
+        "relegated": 0,
+        "ensemble": 0.2113,
+        "logistic": 0.2751,
+        "rf": 0.1875,
+        "gbm": 0.1713
+      },
+      {
+        "season": "2016-17",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.0365,
+        "logistic": 0.037,
+        "rf": 0.0308,
+        "gbm": 0.0417
+      },
+      {
+        "season": "2016-17",
+        "team": "Leicester",
+        "relegated": 0,
+        "ensemble": 0.0332,
+        "logistic": 0.037,
+        "rf": 0.0208,
+        "gbm": 0.0417
+      },
+      {
+        "season": "2016-17",
+        "team": "Stoke",
+        "relegated": 0,
+        "ensemble": 0.1581,
+        "logistic": 0.1666,
+        "rf": 0.1243,
+        "gbm": 0.1833
+      },
+      {
+        "season": "2016-17",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.1308,
+        "logistic": 0.1323,
+        "rf": 0.0767,
+        "gbm": 0.1833
+      },
+      {
+        "season": "2016-17",
+        "team": "Swansea",
+        "relegated": 0,
+        "ensemble": 0.0668,
+        "logistic": 0.037,
+        "rf": 0.0515,
+        "gbm": 0.1118
+      },
+      {
+        "season": "2016-17",
+        "team": "Burnley",
+        "relegated": 0,
+        "ensemble": 0.0619,
+        "logistic": 0.0,
+        "rf": 0.0738,
+        "gbm": 0.1118
+      },
+      {
+        "season": "2016-17",
+        "team": "Watford",
+        "relegated": 0,
+        "ensemble": 0.0881,
+        "logistic": 0.037,
+        "rf": 0.1857,
+        "gbm": 0.0417
+      },
+      {
+        "season": "2016-17",
+        "team": "Hull",
+        "relegated": 1,
+        "ensemble": 0.286,
+        "logistic": 0.2181,
+        "rf": 0.3556,
+        "gbm": 0.2845
+      },
+      {
+        "season": "2016-17",
+        "team": "Middlesbrough",
+        "relegated": 1,
+        "ensemble": 0.1082,
+        "logistic": 0.0,
+        "rf": 0.1414,
+        "gbm": 0.1833
+      },
+      {
+        "season": "2016-17",
+        "team": "Sunderland",
+        "relegated": 1,
+        "ensemble": 0.835,
+        "logistic": 1.0,
+        "rf": 0.8333,
+        "gbm": 0.6718
+      },
+      {
+        "season": "2017-18",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2017-18",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2017-18",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.0207,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0621
+      },
+      {
+        "season": "2017-18",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2017-18",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0247,
+        "logistic": 0.0,
+        "rf": 0.0741,
+        "gbm": 0.0
+      },
+      {
+        "season": "2017-18",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0415,
+        "logistic": 0.0623,
+        "rf": 0.0,
+        "gbm": 0.0621
+      },
+      {
+        "season": "2017-18",
+        "team": "Burnley",
+        "relegated": 0,
+        "ensemble": 0.0207,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0621
+      },
+      {
+        "season": "2017-18",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.1068,
+        "logistic": 0.0933,
+        "rf": 0.165,
+        "gbm": 0.0621
+      },
+      {
+        "season": "2017-18",
+        "team": "Leicester",
+        "relegated": 0,
+        "ensemble": 0.2087,
+        "logistic": 0.1346,
+        "rf": 0.3248,
+        "gbm": 0.1668
+      },
+      {
+        "season": "2017-18",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.1562,
+        "logistic": 0.2679,
+        "rf": 0.0909,
+        "gbm": 0.1097
+      },
+      {
+        "season": "2017-18",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.1259,
+        "logistic": 0.0989,
+        "rf": 0.165,
+        "gbm": 0.1137
+      },
+      {
+        "season": "2017-18",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.6924,
+        "logistic": 0.7,
+        "rf": 0.6111,
+        "gbm": 0.7661
+      },
+      {
+        "season": "2017-18",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.5301,
+        "logistic": 0.55,
+        "rf": 0.4846,
+        "gbm": 0.5556
+      },
+      {
+        "season": "2017-18",
+        "team": "Watford",
+        "relegated": 0,
+        "ensemble": 0.295,
+        "logistic": 0.2679,
+        "rf": 0.4028,
+        "gbm": 0.2143
+      },
+      {
+        "season": "2017-18",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.1536,
+        "logistic": 0.1224,
+        "rf": 0.165,
+        "gbm": 0.1732
+      },
+      {
+        "season": "2017-18",
+        "team": "Huddersfield",
+        "relegated": 0,
+        "ensemble": 0.2891,
+        "logistic": 0.3013,
+        "rf": 0.3519,
+        "gbm": 0.2143
+      },
+      {
+        "season": "2017-18",
+        "team": "Southampton",
+        "relegated": 1,
+        "ensemble": 0.0898,
+        "logistic": 0.0476,
+        "rf": 0.112,
+        "gbm": 0.1097
+      },
+      {
+        "season": "2017-18",
+        "team": "Swansea",
+        "relegated": 1,
+        "ensemble": 0.3355,
+        "logistic": 0.4179,
+        "rf": 0.3519,
+        "gbm": 0.2367
+      },
+      {
+        "season": "2017-18",
+        "team": "Stoke",
+        "relegated": 1,
+        "ensemble": 0.3162,
+        "logistic": 0.2679,
+        "rf": 0.4028,
+        "gbm": 0.2778
+      },
+      {
+        "season": "2017-18",
+        "team": "West Brom",
+        "relegated": 1,
+        "ensemble": 0.5389,
+        "logistic": 0.8667,
+        "rf": 0.4168,
+        "gbm": 0.3333
+      },
+      {
+        "season": "2018-19",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Wolves",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.067,
+        "logistic": 0.0593,
+        "rf": 0.075,
+        "gbm": 0.0667
+      },
+      {
+        "season": "2018-19",
+        "team": "Leicester",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Watford",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.3175,
+        "logistic": 0.4616,
+        "rf": 0.292,
+        "gbm": 0.199
+      },
+      {
+        "season": "2018-19",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.0525,
+        "logistic": 0.1032,
+        "rf": 0.0543,
+        "gbm": 0.0
+      },
+      {
+        "season": "2018-19",
+        "team": "Burnley",
+        "relegated": 0,
+        "ensemble": 0.1557,
+        "logistic": 0.25,
+        "rf": 0.1068,
+        "gbm": 0.1101
+      },
+      {
+        "season": "2018-19",
+        "team": "Southampton",
+        "relegated": 0,
+        "ensemble": 0.2838,
+        "logistic": 0.3611,
+        "rf": 0.292,
+        "gbm": 0.1981
+      },
+      {
+        "season": "2018-19",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.1039,
+        "logistic": 0.0158,
+        "rf": 0.113,
+        "gbm": 0.1828
+      },
+      {
+        "season": "2018-19",
+        "team": "Cardiff",
+        "relegated": 1,
+        "ensemble": 0.2399,
+        "logistic": 0.3056,
+        "rf": 0.2299,
+        "gbm": 0.1842
+      },
+      {
+        "season": "2018-19",
+        "team": "Fulham",
+        "relegated": 1,
+        "ensemble": 0.2952,
+        "logistic": 0.3953,
+        "rf": 0.292,
+        "gbm": 0.1981
+      },
+      {
+        "season": "2018-19",
+        "team": "Huddersfield",
+        "relegated": 1,
+        "ensemble": 0.7951,
+        "logistic": 0.8546,
+        "rf": 0.8519,
+        "gbm": 0.6787
+      },
+      {
+        "season": "2019-20",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2019-20",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2019-20",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0408,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.1224
+      },
+      {
+        "season": "2019-20",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0694,
+        "logistic": 0.0476,
+        "rf": 0.0854,
+        "gbm": 0.0753
+      },
+      {
+        "season": "2019-20",
+        "team": "Leicester",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2019-20",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.1666,
+        "logistic": 0.0476,
+        "rf": 0.1587,
+        "gbm": 0.2934
+      },
+      {
+        "season": "2019-20",
+        "team": "Wolves",
+        "relegated": 0,
+        "ensemble": 0.0159,
+        "logistic": 0.0476,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2019-20",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0159,
+        "logistic": 0.0,
+        "rf": 0.0476,
+        "gbm": 0.0
+      },
+      {
+        "season": "2019-20",
+        "team": "Sheffield United",
+        "relegated": 0,
+        "ensemble": 0.1147,
+        "logistic": 0.0,
+        "rf": 0.1955,
+        "gbm": 0.1486
+      },
+      {
+        "season": "2019-20",
+        "team": "Burnley",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2019-20",
+        "team": "Southampton",
+        "relegated": 0,
+        "ensemble": 0.0238,
+        "logistic": 0.0476,
+        "rf": 0.0,
+        "gbm": 0.0238
+      },
+      {
+        "season": "2019-20",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.2749,
+        "logistic": 0.3167,
+        "rf": 0.2357,
+        "gbm": 0.2724
+      },
+      {
+        "season": "2019-20",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.6874,
+        "logistic": 0.7079,
+        "rf": 0.7556,
+        "gbm": 0.5988
+      },
+      {
+        "season": "2019-20",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.2018,
+        "logistic": 0.1976,
+        "rf": 0.2355,
+        "gbm": 0.1724
+      },
+      {
+        "season": "2019-20",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.244,
+        "logistic": 0.3167,
+        "rf": 0.2114,
+        "gbm": 0.2039
+      },
+      {
+        "season": "2019-20",
+        "team": "West Ham",
+        "relegated": 1,
+        "ensemble": 0.3261,
+        "logistic": 0.281,
+        "rf": 0.3145,
+        "gbm": 0.3827
+      },
+      {
+        "season": "2019-20",
+        "team": "Aston Villa",
+        "relegated": 1,
+        "ensemble": 0.8617,
+        "logistic": 0.8988,
+        "rf": 0.974,
+        "gbm": 0.7121
+      },
+      {
+        "season": "2019-20",
+        "team": "Bournemouth",
+        "relegated": 1,
+        "ensemble": 0.3341,
+        "logistic": 0.4722,
+        "rf": 0.2862,
+        "gbm": 0.2438
+      },
+      {
+        "season": "2019-20",
+        "team": "Watford",
+        "relegated": 1,
+        "ensemble": 0.8015,
+        "logistic": 1.0,
+        "rf": 0.8592,
+        "gbm": 0.5455
+      },
+      {
+        "season": "2019-20",
+        "team": "Norwich",
+        "relegated": 1,
+        "ensemble": 0.8544,
+        "logistic": 1.0,
+        "rf": 0.8512,
+        "gbm": 0.7121
+      },
+      {
+        "season": "2020-21",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2020-21",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0121,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0362
+      },
+      {
+        "season": "2020-21",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0038,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0115
+      },
+      {
+        "season": "2020-21",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0069,
+        "logistic": 0.0,
+        "rf": 0.0208,
+        "gbm": 0.0
+      },
+      {
+        "season": "2020-21",
+        "team": "Leicester",
+        "relegated": 0,
+        "ensemble": 0.0038,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0115
+      },
+      {
+        "season": "2020-21",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.0038,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0115
+      },
+      {
+        "season": "2020-21",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.0306,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0917
+      },
+      {
+        "season": "2020-21",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0404,
+        "logistic": 0.0,
+        "rf": 0.037,
+        "gbm": 0.0841
+      },
+      {
+        "season": "2020-21",
+        "team": "Leeds",
+        "relegated": 0,
+        "ensemble": 0.0279,
+        "logistic": 0.0,
+        "rf": 0.0476,
+        "gbm": 0.0362
+      },
+      {
+        "season": "2020-21",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.0244,
+        "logistic": 0.0,
+        "rf": 0.037,
+        "gbm": 0.0362
+      },
+      {
+        "season": "2020-21",
+        "team": "Aston Villa",
+        "relegated": 0,
+        "ensemble": 0.0038,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0115
+      },
+      {
+        "season": "2020-21",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.022,
+        "logistic": 0.0,
+        "rf": 0.037,
+        "gbm": 0.0288
+      },
+      {
+        "season": "2020-21",
+        "team": "Wolves",
+        "relegated": 0,
+        "ensemble": 0.1063,
+        "logistic": 0.2143,
+        "rf": 0.0685,
+        "gbm": 0.0362
+      },
+      {
+        "season": "2020-21",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.075,
+        "logistic": 0.119,
+        "rf": 0.0395,
+        "gbm": 0.0664
+      },
+      {
+        "season": "2020-21",
+        "team": "Southampton",
+        "relegated": 0,
+        "ensemble": 0.4012,
+        "logistic": 0.4563,
+        "rf": 0.3892,
+        "gbm": 0.358
+      },
+      {
+        "season": "2020-21",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.0121,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0362
+      },
+      {
+        "season": "2020-21",
+        "team": "Burnley",
+        "relegated": 0,
+        "ensemble": 0.0462,
+        "logistic": 0.0,
+        "rf": 0.0579,
+        "gbm": 0.0806
+      },
+      {
+        "season": "2020-21",
+        "team": "Fulham",
+        "relegated": 1,
+        "ensemble": 0.4032,
+        "logistic": 0.6944,
+        "rf": 0.3934,
+        "gbm": 0.1219
+      },
+      {
+        "season": "2020-21",
+        "team": "West Brom",
+        "relegated": 1,
+        "ensemble": 0.9162,
+        "logistic": 0.945,
+        "rf": 0.928,
+        "gbm": 0.8756
+      },
+      {
+        "season": "2020-21",
+        "team": "Sheffield United",
+        "relegated": 1,
+        "ensemble": 0.4231,
+        "logistic": 0.6944,
+        "rf": 0.3604,
+        "gbm": 0.2145
+      },
+      {
+        "season": "2021-22",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2021-22",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2021-22",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2021-22",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2021-22",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2021-22",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.4327,
+        "logistic": 0.534,
+        "rf": 0.3609,
+        "gbm": 0.4032
+      },
+      {
+        "season": "2021-22",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.0488,
+        "logistic": 0.0,
+        "rf": 0.0611,
+        "gbm": 0.0852
+      },
+      {
+        "season": "2021-22",
+        "team": "Leicester",
+        "relegated": 0,
+        "ensemble": 0.1647,
+        "logistic": 0.0,
+        "rf": 0.357,
+        "gbm": 0.137
+      },
+      {
+        "season": "2021-22",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.0566,
+        "logistic": 0.0,
+        "rf": 0.0476,
+        "gbm": 0.1222
+      },
+      {
+        "season": "2021-22",
+        "team": "Wolves",
+        "relegated": 0,
+        "ensemble": 0.0182,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0545
+      },
+      {
+        "season": "2021-22",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.0659,
+        "logistic": 0.0,
+        "rf": 0.0754,
+        "gbm": 0.1222
+      },
+      {
+        "season": "2021-22",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.0313,
+        "logistic": 0.0,
+        "rf": 0.0754,
+        "gbm": 0.0185
+      },
+      {
+        "season": "2021-22",
+        "team": "Brentford",
+        "relegated": 0,
+        "ensemble": 0.0184,
+        "logistic": 0.0,
+        "rf": 0.0552,
+        "gbm": 0.0
+      },
+      {
+        "season": "2021-22",
+        "team": "Aston Villa",
+        "relegated": 0,
+        "ensemble": 0.1393,
+        "logistic": 0.1742,
+        "rf": 0.1713,
+        "gbm": 0.0724
+      },
+      {
+        "season": "2021-22",
+        "team": "Southampton",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2021-22",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.1017,
+        "logistic": 0.1742,
+        "rf": 0.0754,
+        "gbm": 0.0556
+      },
+      {
+        "season": "2021-22",
+        "team": "Leeds",
+        "relegated": 0,
+        "ensemble": 0.4094,
+        "logistic": 0.4565,
+        "rf": 0.4069,
+        "gbm": 0.3647
+      },
+      {
+        "season": "2021-22",
+        "team": "Burnley",
+        "relegated": 1,
+        "ensemble": 0.6571,
+        "logistic": 0.6587,
+        "rf": 0.6663,
+        "gbm": 0.6462
+      },
+      {
+        "season": "2021-22",
+        "team": "Watford",
+        "relegated": 1,
+        "ensemble": 0.854,
+        "logistic": 0.9182,
+        "rf": 0.9644,
+        "gbm": 0.6795
+      },
+      {
+        "season": "2021-22",
+        "team": "Norwich",
+        "relegated": 1,
+        "ensemble": 0.7937,
+        "logistic": 0.9406,
+        "rf": 0.8279,
+        "gbm": 0.6128
+      },
+      {
+        "season": "2022-23",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0145,
+        "logistic": 0.0,
+        "rf": 0.0303,
+        "gbm": 0.0133
+      },
+      {
+        "season": "2022-23",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2022-23",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0101,
+        "logistic": 0.0,
+        "rf": 0.0303,
+        "gbm": 0.0
+      },
+      {
+        "season": "2022-23",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.0104,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0312
+      },
+      {
+        "season": "2022-23",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2022-23",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.1322,
+        "logistic": 0.0,
+        "rf": 0.1278,
+        "gbm": 0.2688
+      },
+      {
+        "season": "2022-23",
+        "team": "Aston Villa",
+        "relegated": 0,
+        "ensemble": 0.0222,
+        "logistic": 0.0,
+        "rf": 0.0667,
+        "gbm": 0.0
+      },
+      {
+        "season": "2022-23",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.363,
+        "logistic": 0.0625,
+        "rf": 0.5667,
+        "gbm": 0.4598
+      },
+      {
+        "season": "2022-23",
+        "team": "Brentford",
+        "relegated": 0,
+        "ensemble": 0.0183,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.055
+      },
+      {
+        "season": "2022-23",
+        "team": "Fulham",
+        "relegated": 0,
+        "ensemble": 0.2816,
+        "logistic": 0.4492,
+        "rf": 0.2025,
+        "gbm": 0.1932
+      },
+      {
+        "season": "2022-23",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.0104,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0312
+      },
+      {
+        "season": "2022-23",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.2269,
+        "logistic": 0.2778,
+        "rf": 0.2944,
+        "gbm": 0.1086
+      },
+      {
+        "season": "2022-23",
+        "team": "Wolves",
+        "relegated": 0,
+        "ensemble": 0.2196,
+        "logistic": 0.1311,
+        "rf": 0.2667,
+        "gbm": 0.2611
+      },
+      {
+        "season": "2022-23",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.5603,
+        "logistic": 0.4816,
+        "rf": 0.55,
+        "gbm": 0.6492
+      },
+      {
+        "season": "2022-23",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.0723,
+        "logistic": 0.0769,
+        "rf": 0.1148,
+        "gbm": 0.0253
+      },
+      {
+        "season": "2022-23",
+        "team": "Nottm Forest",
+        "relegated": 0,
+        "ensemble": 0.2045,
+        "logistic": 0.1417,
+        "rf": 0.2667,
+        "gbm": 0.2052
+      },
+      {
+        "season": "2022-23",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.0853,
+        "logistic": 0.1394,
+        "rf": 0.0303,
+        "gbm": 0.0863
+      },
+      {
+        "season": "2022-23",
+        "team": "Leicester",
+        "relegated": 1,
+        "ensemble": 0.6834,
+        "logistic": 0.6706,
+        "rf": 0.6128,
+        "gbm": 0.7667
+      },
+      {
+        "season": "2022-23",
+        "team": "Leeds",
+        "relegated": 1,
+        "ensemble": 0.5308,
+        "logistic": 0.6592,
+        "rf": 0.4833,
+        "gbm": 0.45
+      },
+      {
+        "season": "2022-23",
+        "team": "Southampton",
+        "relegated": 1,
+        "ensemble": 0.9635,
+        "logistic": 0.8977,
+        "rf": 0.9929,
+        "gbm": 1.0
+      },
+      {
+        "season": "2023-24",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0046,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0046,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2023-24",
+        "team": "Aston Villa",
+        "relegated": 0,
+        "ensemble": 0.0046,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.0161,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0484
+      },
+      {
+        "season": "2023-24",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.122,
+        "logistic": 0.0833,
+        "rf": 0.1974,
+        "gbm": 0.0854
+      },
+      {
+        "season": "2023-24",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.0925,
+        "logistic": 0.0847,
+        "rf": 0.0789,
+        "gbm": 0.1139
+      },
+      {
+        "season": "2023-24",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0107,
+        "logistic": 0.0183,
+        "rf": 0.0,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.0294,
+        "logistic": 0.0546,
+        "rf": 0.0196,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.0046,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.1953,
+        "logistic": 0.1852,
+        "rf": 0.1148,
+        "gbm": 0.2858
+      },
+      {
+        "season": "2023-24",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.0871,
+        "logistic": 0.1217,
+        "rf": 0.0914,
+        "gbm": 0.0484
+      },
+      {
+        "season": "2023-24",
+        "team": "Fulham",
+        "relegated": 0,
+        "ensemble": 0.0233,
+        "logistic": 0.0559,
+        "rf": 0.0,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Wolves",
+        "relegated": 0,
+        "ensemble": 0.1589,
+        "logistic": 0.1217,
+        "rf": 0.2704,
+        "gbm": 0.0847
+      },
+      {
+        "season": "2023-24",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.0186,
+        "logistic": 0.0,
+        "rf": 0.0418,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Brentford",
+        "relegated": 0,
+        "ensemble": 0.5923,
+        "logistic": 0.6766,
+        "rf": 0.4694,
+        "gbm": 0.631
+      },
+      {
+        "season": "2023-24",
+        "team": "Nottm Forest",
+        "relegated": 0,
+        "ensemble": 0.0258,
+        "logistic": 0.0636,
+        "rf": 0.0,
+        "gbm": 0.0139
+      },
+      {
+        "season": "2023-24",
+        "team": "Luton",
+        "relegated": 1,
+        "ensemble": 0.7155,
+        "logistic": 0.9756,
+        "rf": 0.54,
+        "gbm": 0.631
+      },
+      {
+        "season": "2023-24",
+        "team": "Burnley",
+        "relegated": 1,
+        "ensemble": 0.9383,
+        "logistic": 0.9828,
+        "rf": 0.8321,
+        "gbm": 1.0
+      },
+      {
+        "season": "2023-24",
+        "team": "Sheffield United",
+        "relegated": 1,
+        "ensemble": 1.0,
+        "logistic": 1.0,
+        "rf": 1.0,
+        "gbm": 1.0
+      },
+      {
+        "season": "2024-25",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0026,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0286,
+        "logistic": 0.0412,
+        "rf": 0.0444,
+        "gbm": 0.0
+      },
+      {
+        "season": "2024-25",
+        "team": "Nottm Forest",
+        "relegated": 0,
+        "ensemble": 0.0097,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.029
+      },
+      {
+        "season": "2024-25",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0026,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0026,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.0026,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Aston Villa",
+        "relegated": 0,
+        "ensemble": 0.0026,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.0185,
+        "logistic": 0.032,
+        "rf": 0.0159,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.113,
+        "logistic": 0.097,
+        "rf": 0.0444,
+        "gbm": 0.1976
+      },
+      {
+        "season": "2024-25",
+        "team": "Fulham",
+        "relegated": 0,
+        "ensemble": 0.0026,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Brentford",
+        "relegated": 0,
+        "ensemble": 0.2457,
+        "logistic": 0.2624,
+        "rf": 0.2481,
+        "gbm": 0.2266
+      },
+      {
+        "season": "2024-25",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.1,
+        "logistic": 0.0911,
+        "rf": 0.0603,
+        "gbm": 0.1485
+      },
+      {
+        "season": "2024-25",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.7904,
+        "logistic": 0.5738,
+        "rf": 0.8846,
+        "gbm": 0.913
+      },
+      {
+        "season": "2024-25",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.0076,
+        "logistic": 0.0151,
+        "rf": 0.0,
+        "gbm": 0.0078
+      },
+      {
+        "season": "2024-25",
+        "team": "Wolves",
+        "relegated": 0,
+        "ensemble": 0.466,
+        "logistic": 0.3069,
+        "rf": 0.5352,
+        "gbm": 0.556
+      },
+      {
+        "season": "2024-25",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.7695,
+        "logistic": 0.8333,
+        "rf": 0.7738,
+        "gbm": 0.7014
+      },
+      {
+        "season": "2024-25",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.4911,
+        "logistic": 0.5132,
+        "rf": 0.4821,
+        "gbm": 0.4779
+      },
+      {
+        "season": "2024-25",
+        "team": "Ipswich",
+        "relegated": 1,
+        "ensemble": 0.4205,
+        "logistic": 0.3624,
+        "rf": 0.4821,
+        "gbm": 0.4168
+      },
+      {
+        "season": "2024-25",
+        "team": "Leicester",
+        "relegated": 1,
+        "ensemble": 0.9107,
+        "logistic": 1.0,
+        "rf": 0.9896,
+        "gbm": 0.7424
+      },
+      {
+        "season": "2024-25",
+        "team": "Southampton",
+        "relegated": 1,
+        "ensemble": 0.9511,
+        "logistic": 0.8889,
+        "rf": 0.9643,
+        "gbm": 1.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Arsenal",
+        "relegated": 0,
+        "ensemble": 0.0025,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0076
+      },
+      {
+        "season": "2025-26",
+        "team": "Manchester City",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Liverpool",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Chelsea",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Newcastle",
+        "relegated": 0,
+        "ensemble": 0.0451,
+        "logistic": 0.05,
+        "rf": 0.0417,
+        "gbm": 0.0437
+      },
+      {
+        "season": "2025-26",
+        "team": "Aston Villa",
+        "relegated": 0,
+        "ensemble": 0.0383,
+        "logistic": 0.0358,
+        "rf": 0.0355,
+        "gbm": 0.0437
+      },
+      {
+        "season": "2025-26",
+        "team": "Brighton",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Brentford",
+        "relegated": 0,
+        "ensemble": 0.0909,
+        "logistic": 0.087,
+        "rf": 0.0787,
+        "gbm": 0.1068
+      },
+      {
+        "season": "2025-26",
+        "team": "Fulham",
+        "relegated": 0,
+        "ensemble": 0.1628,
+        "logistic": 0.087,
+        "rf": 0.1044,
+        "gbm": 0.2971
+      },
+      {
+        "season": "2025-26",
+        "team": "Bournemouth",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Crystal Palace",
+        "relegated": 0,
+        "ensemble": 0.0722,
+        "logistic": 0.05,
+        "rf": 0.0,
+        "gbm": 0.1667
+      },
+      {
+        "season": "2025-26",
+        "team": "Everton",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Manchester United",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "West Ham",
+        "relegated": 0,
+        "ensemble": 0.0664,
+        "logistic": 0.0928,
+        "rf": 0.0787,
+        "gbm": 0.0278
+      },
+      {
+        "season": "2025-26",
+        "team": "Leeds",
+        "relegated": 0,
+        "ensemble": 0.0,
+        "logistic": 0.0,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Nottm Forest",
+        "relegated": 0,
+        "ensemble": 0.075,
+        "logistic": 0.175,
+        "rf": 0.0222,
+        "gbm": 0.0278
+      },
+      {
+        "season": "2025-26",
+        "team": "Sunderland",
+        "relegated": 0,
+        "ensemble": 0.0274,
+        "logistic": 0.037,
+        "rf": 0.0174,
+        "gbm": 0.0278
+      },
+      {
+        "season": "2025-26",
+        "team": "Tottenham",
+        "relegated": 0,
+        "ensemble": 0.029,
+        "logistic": 0.087,
+        "rf": 0.0,
+        "gbm": 0.0
+      },
+      {
+        "season": "2025-26",
+        "team": "Burnley",
+        "relegated": 1,
+        "ensemble": 0.9093,
+        "logistic": 0.9167,
+        "rf": 0.9333,
+        "gbm": 0.8778
+      },
+      {
+        "season": "2025-26",
+        "team": "Wolves",
+        "relegated": 1,
+        "ensemble": 0.9605,
+        "logistic": 0.9483,
+        "rf": 1.0,
+        "gbm": 0.9333
+      }
+    ]
+  },
+  "spurs_current": {
+    "season": "2025-26",
+    "team": "Tottenham",
+    "pts_snap": 34,
+    "gd_snap": -10,
+    "gf_snap": 42,
+    "ga_snap": 52,
+    "wins": 8,
+    "draws": 10,
+    "losses": 16,
+    "games_played": 34,
+    "games_remaining": 4,
+    "form": 0.08,
+    "ppg": 1.0,
+    "projected_pts": 38.0,
+    "safety_buffer": -2,
+    "gdpg": -0.294,
+    "gf_pg": 1.235,
+    "ga_pg": 1.529,
+    "win_rate": 0.235,
+    "home_pts": 14,
+    "away_pts": 20,
+    "home_ppg": 0.824,
+    "away_ppg": 1.176,
+    "elo": 1438.0,
+    "final_pts": null,
+    "final_gd": null,
+    "relegated": null
+  },
+  "ml_probabilities": {
+    "logistic": 0.43751651359130606,
+    "rf": 0.46016668870798166,
+    "gbm": 0.34137178551832187,
+    "ensemble": 0.4130183292725365
+  },
+  "monte_carlo": {
+    "Leeds": {
+      "relegation_prob": 0.0036,
+      "safe_prob": 0.9964,
+      "avg_final_pts": 45.4,
+      "p10_final_pts": 42.0,
+      "p50_final_pts": 45.0,
+      "p90_final_pts": 49.0
+    },
+    "Nottm Forest": {
+      "relegation_prob": 0.0714,
+      "safe_prob": 0.9286,
+      "avg_final_pts": 42.6,
+      "p10_final_pts": 40.0,
+      "p50_final_pts": 42.0,
+      "p90_final_pts": 46.0
+    },
+    "West Ham": {
+      "relegation_prob": 0.3542,
+      "safe_prob": 0.6458,
+      "avg_final_pts": 40.5,
+      "p10_final_pts": 37.0,
+      "p50_final_pts": 40.0,
+      "p90_final_pts": 44.0
+    },
+    "Sunderland": {
+      "relegation_prob": 0.0881,
+      "safe_prob": 0.9119,
+      "avg_final_pts": 41.5,
+      "p10_final_pts": 39.0,
+      "p50_final_pts": 41.0,
+      "p90_final_pts": 44.0
+    },
+    "Tottenham": {
+      "relegation_prob": 0.4827,
+      "safe_prob": 0.5173,
+      "avg_final_pts": 39.4,
+      "p10_final_pts": 36.0,
+      "p50_final_pts": 40.0,
+      "p90_final_pts": 43.0
+    },
+    "Burnley": {
+      "relegation_prob": 1.0,
+      "safe_prob": 0.0,
+      "avg_final_pts": 23.5,
+      "p10_final_pts": 21.0,
+      "p50_final_pts": 23.0,
+      "p90_final_pts": 27.0
+    },
+    "Wolves": {
+      "relegation_prob": 1.0,
+      "safe_prob": 0.0,
+      "avg_final_pts": 18.7,
+      "p10_final_pts": 17.0,
+      "p50_final_pts": 18.0,
+      "p90_final_pts": 21.0
+    }
+  },
+  "match_probabilities": [
+    {
+      "home": "Tottenham",
+      "away": "Wolves",
+      "spurs_win_prob": 0.646,
+      "draw_prob": 0.2,
+      "spurs_loss_prob": 0.154,
+      "lam_spurs": 2.09,
+      "lam_opp": 0.91,
+      "venue": "Home"
+    },
+    {
+      "home": "Aston Villa",
+      "away": "Tottenham",
+      "spurs_win_prob": 0.115,
+      "draw_prob": 0.16,
+      "spurs_loss_prob": 0.725,
+      "lam_spurs": 0.91,
+      "lam_opp": 2.54,
+      "venue": "Away"
+    },
+    {
+      "home": "Tottenham",
+      "away": "Leeds",
+      "spurs_win_prob": 0.397,
+      "draw_prob": 0.244,
+      "spurs_loss_prob": 0.359,
+      "lam_spurs": 1.53,
+      "lam_opp": 1.44,
+      "venue": "Home"
+    },
+    {
+      "home": "Tottenham",
+      "away": "Everton",
+      "spurs_win_prob": 0.358,
+      "draw_prob": 0.244,
+      "spurs_loss_prob": 0.398,
+      "lam_spurs": 1.44,
+      "lam_opp": 1.53,
+      "venue": "Home"
+    }
+  ],
+  "final_probability": 0.4548,
+  "shap_values": [
+    {
+      "feature": "attacking_output",
+      "label": "Attacking output",
+      "value": 0.290225,
+      "shap_value": 0.17979647423737508,
+      "direction": "increases risk"
+    },
+    {
+      "feature": "ga_pg",
+      "label": "Goals conceded per game",
+      "value": 1.529,
+      "shap_value": 0.07450866506224078,
+      "direction": "increases risk"
+    },
+    {
+      "feature": "gf_pg",
+      "label": "Goals scored per game",
+      "value": 1.235,
+      "shap_value": 0.06302266208549584,
+      "direction": "increases risk"
+    },
+    {
+      "feature": "home_away_balance",
+      "label": "Home/away balance",
+      "value": -0.352,
+      "shap_value": 0.049138260114846816,
+      "direction": "increases risk"
+    },
+    {
+      "feature": "ppg",
+      "label": "Points per game",
+      "value": 1.0,
+      "shap_value": -0.023946711104412908,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "home_ppg",
+      "label": "Home PPG",
+      "value": 0.824,
+      "shap_value": 0.016539480481609914,
+      "direction": "increases risk"
+    },
+    {
+      "feature": "defensive_fragility",
+      "label": "Defensive fragility",
+      "value": 1.2380566801619433,
+      "shap_value": -0.01355878241917669,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "max_pts_possible",
+      "label": "Max points possible",
+      "value": 46.0,
+      "shap_value": -0.011158651406884065,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "win_rate",
+      "label": "Win rate",
+      "value": 0.235,
+      "shap_value": 0.010128748832689636,
+      "direction": "increases risk"
+    },
+    {
+      "feature": "projected_pts",
+      "label": "Projected final pts",
+      "value": 38.0,
+      "shap_value": -0.006420888985232909,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "pts_snap",
+      "label": "Points at GW34",
+      "value": 34.0,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "gd_snap",
+      "label": "Goal difference",
+      "value": -10.0,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "form",
+      "label": "Weighted form (last 10)",
+      "value": 0.08,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "safety_buffer",
+      "label": "Buffer above danger line",
+      "value": -2.0,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "gdpg",
+      "label": "GD per game",
+      "value": -0.294,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "away_ppg",
+      "label": "Away PPG",
+      "value": 1.176,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "elo",
+      "label": "Elo rating",
+      "value": 1438.0,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "pts_needed_for_safety",
+      "label": "Pts needed for safety",
+      "value": 2.0,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    },
+    {
+      "feature": "survival_feasibility",
+      "label": "Survival feasibility",
+      "value": 1.2777777777777777,
+      "shap_value": 0.0,
+      "direction": "decreases risk"
+    }
+  ],
+  "shap_base_value": 0.12211743180943015,
+  "scenarios": [
+    {
+      "name": "Win all 4",
+      "W": 4,
+      "D": 0,
+      "L": 0,
+      "final_pts": 46,
+      "final_gd": -4.0,
+      "probability": 0.6181
+    },
+    {
+      "name": "Win 3, draw 1",
+      "W": 3,
+      "D": 1,
+      "L": 0,
+      "final_pts": 44,
+      "final_gd": -5.5,
+      "probability": 0.5973
+    },
+    {
+      "name": "Win 2, draw 2",
+      "W": 2,
+      "D": 2,
+      "L": 0,
+      "final_pts": 42,
+      "final_gd": -7.0,
+      "probability": 0.5285
+    },
+    {
+      "name": "Win 2, draw 1, lose 1",
+      "W": 2,
+      "D": 1,
+      "L": 1,
+      "final_pts": 41,
+      "final_gd": -8.5,
+      "probability": 0.4502
+    },
+    {
+      "name": "Win 2, lose 2",
+      "W": 2,
+      "D": 0,
+      "L": 2,
+      "final_pts": 40,
+      "final_gd": -10.0,
+      "probability": 0.4453
+    },
+    {
+      "name": "Win 1, draw 2, lose 1",
+      "W": 1,
+      "D": 2,
+      "L": 1,
+      "final_pts": 39,
+      "final_gd": -10.0,
+      "probability": 0.4281
+    },
+    {
+      "name": "Win 1, draw 1, lose 2",
+      "W": 1,
+      "D": 1,
+      "L": 2,
+      "final_pts": 38,
+      "final_gd": -11.5,
+      "probability": 0.4241
+    },
+    {
+      "name": "Draw 2, lose 2",
+      "W": 0,
+      "D": 2,
+      "L": 2,
+      "final_pts": 36,
+      "final_gd": -13.0,
+      "probability": 0.4053
+    },
+    {
+      "name": "Draw 1, lose 3",
+      "W": 0,
+      "D": 1,
+      "L": 3,
+      "final_pts": 35,
+      "final_gd": -14.5,
+      "probability": 0.4048
+    },
+    {
+      "name": "Lose all 4",
+      "W": 0,
+      "D": 0,
+      "L": 4,
+      "final_pts": 34,
+      "final_gd": -16.0,
+      "probability": 0.4045
+    }
+  ],
+  "rivals": [
+    {
+      "team": "Leeds United",
+      "pts": 40,
+      "gd": 5,
+      "games_remaining": 4
+    },
+    {
+      "team": "Nottm Forest",
+      "pts": 39,
+      "gd": -2,
+      "games_remaining": 4
+    },
+    {
+      "team": "West Ham",
+      "pts": 36,
+      "gd": -17,
+      "games_remaining": 4
+    },
+    {
+      "team": "Tottenham",
+      "pts": 34,
+      "gd": -10,
+      "games_remaining": 4
+    },
+    {
+      "team": "Burnley",
+      "pts": 20,
+      "gd": -34,
+      "games_remaining": 4,
+      "relegated": true
+    },
+    {
+      "team": "Wolves",
+      "pts": 17,
+      "gd": -38,
+      "games_remaining": 4,
+      "relegated": true
+    }
+  ],
+  "current_standings": [
+    {
+      "team": "Leeds",
+      "pts": 40,
+      "gd": 5,
+      "gf": 48
+    },
+    {
+      "team": "Nottm Forest",
+      "pts": 39,
+      "gd": -2,
+      "gf": 42
+    },
+    {
+      "team": "West Ham",
+      "pts": 36,
+      "gd": -17,
+      "gf": 40
+    },
+    {
+      "team": "Sunderland",
+      "pts": 38,
+      "gd": -6,
+      "gf": 40
+    },
+    {
+      "team": "Tottenham",
+      "pts": 34,
+      "gd": -10,
+      "gf": 42
+    },
+    {
+      "team": "Burnley",
+      "pts": 20,
+      "gd": -34,
+      "gf": 28
+    },
+    {
+      "team": "Wolves",
+      "pts": 17,
+      "gd": -38,
+      "gf": 26
+    }
+  ]
+}
