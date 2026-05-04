@@ -20,9 +20,10 @@ import catboost as cb
 import pickle, json
 
 warnings.filterwarnings("ignore")
-DATA    = Path("/home/claude/wc2026/data")
-MODELS  = Path("/home/claude/wc2026/models")
-OUTPUTS = Path("/home/claude/wc2026/outputs")
+_ROOT = Path(__file__).resolve().parent.parent
+DATA    = _ROOT / "data"
+MODELS  = _ROOT / "models"
+OUTPUTS = _ROOT / "outputs"
 MODELS.mkdir(exist_ok=True)
 OUTPUTS.mkdir(exist_ok=True)
 

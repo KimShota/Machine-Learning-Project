@@ -1,4 +1,6 @@
 """src/features.py — Feature engineering pipeline."""
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 
@@ -127,7 +129,35 @@ def build_feature_matrix(matches, elo, fifa, squad, odds):
     df=_merge_odds(df,odds)
     df=_merge_squad(df,squad)
     for col in FEATURE_COLS:
-        if col in df.columns:
-            df[col]=pd.to_numeric(df[col],errors="coerce").fillna(df[col].median() if col in df.columns else 0)
+        if col not in df.columns:
+            df[col] = 0.0
+    for col in FEATURE_COLS:
+        med = df[col].median()
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(med if pd.notna(med) else 0.0)
     print(f"    → {len(df):,} rows, {sum(1 for c in FEATURE_COLS if c in df.columns)} features")
+    return df
+
+
+def build_features(save=True, data_dir=None):
+    """
+    Load raw CSVs from data/, build the match-level feature matrix, optionally save merged_dataset.csv.
+    Expects: 01_match_results.csv … 05_betting_odds.csv from generate_data.build_and_save_all.
+    """
+    if data_dir is None:
+        data_dir = Path(__file__).resolve().parent.parent / "data"
+    data_dir = Path(data_dir)
+
+    matches = pd.read_csv(data_dir / "01_match_results.csv", parse_dates=["date"])
+    elo = pd.read_csv(data_dir / "02_elo_ratings.csv", parse_dates=["date"])
+    fifa = pd.read_csv(data_dir / "03_fifa_rankings.csv", parse_dates=["rank_date"])
+    squad = pd.read_csv(data_dir / "04_squad_stats.csv")
+    odds = pd.read_csv(data_dir / "05_betting_odds.csv")
+
+    df = build_feature_matrix(matches, elo, fifa, squad, odds)
+    df["year"] = df["date"].dt.year
+
+    if save:
+        out = data_dir / "merged_dataset.csv"
+        df.to_csv(out, index=False)
+        print(f"    Saved → {out} ({len(df):,} rows)")
     return df

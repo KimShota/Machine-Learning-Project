@@ -1,73 +1,73 @@
-match,group,home_team,away_team,p_home_win,p_draw,p_away_win,prediction
-1,A,Mexico,South Africa,0.586,0.253,0.161,Home Win
-2,A,Mexico,South Korea,0.523,0.249,0.228,Home Win
-3,A,Mexico,Czechia,0.622,0.207,0.171,Home Win
-4,A,South Africa,South Korea,0.238,0.259,0.504,Away Win
-5,A,South Africa,Czechia,0.383,0.209,0.407,Away Win
-6,A,South Korea,Czechia,0.658,0.125,0.217,Home Win
-7,B,Canada,Bosnia and Herzegovina,0.598,0.205,0.197,Home Win
-8,B,Canada,Qatar,0.573,0.248,0.179,Home Win
-9,B,Canada,Switzerland,0.258,0.252,0.49,Away Win
-10,B,Bosnia and Herzegovina,Qatar,0.383,0.209,0.407,Away Win
-11,B,Bosnia and Herzegovina,Switzerland,0.104,0.104,0.792,Away Win
-12,B,Qatar,Switzerland,0.106,0.089,0.805,Away Win
-13,C,Brazil,Morocco,0.602,0.2,0.199,Home Win
-14,C,Brazil,Haiti,0.742,0.152,0.106,Home Win
-15,C,Brazil,Scotland,0.704,0.195,0.101,Home Win
-16,C,Morocco,Haiti,0.623,0.27,0.107,Home Win
-17,C,Morocco,Scotland,0.623,0.27,0.107,Home Win
-18,C,Haiti,Scotland,0.198,0.08,0.722,Away Win
-19,D,United States,Paraguay,0.583,0.2,0.216,Home Win
-20,D,United States,Australia,0.523,0.249,0.228,Home Win
-21,D,United States,Turkey,0.523,0.249,0.228,Home Win
-22,D,Paraguay,Australia,0.258,0.252,0.49,Away Win
-23,D,Paraguay,Turkey,0.258,0.252,0.49,Away Win
-24,D,Australia,Turkey,0.489,0.267,0.244,Home Win
-25,E,Germany,Cuba,0.742,0.152,0.106,Home Win
-26,E,Germany,Ivory Coast,0.567,0.245,0.187,Home Win
-27,E,Germany,Ecuador,0.567,0.245,0.187,Home Win
-28,E,Cuba,Ivory Coast,0.106,0.089,0.805,Away Win
-29,E,Cuba,Ecuador,0.106,0.089,0.805,Away Win
-30,E,Ivory Coast,Ecuador,0.258,0.252,0.49,Away Win
-31,F,Portugal,Indonesia,0.704,0.195,0.101,Home Win
-32,F,Portugal,Algeria,0.704,0.195,0.101,Home Win
-33,F,Portugal,Croatia,0.602,0.2,0.199,Home Win
-34,F,Indonesia,Algeria,0.258,0.252,0.49,Away Win
-35,F,Indonesia,Croatia,0.251,0.217,0.532,Away Win
-36,F,Algeria,Croatia,0.238,0.259,0.504,Away Win
-37,G,Belgium,Egypt,0.635,0.156,0.21,Home Win
-38,G,Belgium,Venezuela,0.699,0.2,0.1,Home Win
-39,G,Belgium,Colombia,0.548,0.236,0.217,Home Win
-40,G,Egypt,Venezuela,0.567,0.245,0.187,Home Win
-41,G,Egypt,Colombia,0.258,0.252,0.49,Away Win
-42,G,Venezuela,Colombia,0.101,0.229,0.67,Away Win
-43,H,Spain,Senegal,0.586,0.253,0.161,Home Win
-44,H,Spain,Chile,0.666,0.239,0.095,Home Win
-45,H,Spain,Japan,0.586,0.253,0.161,Home Win
-46,H,Senegal,Chile,0.664,0.184,0.152,Home Win
-47,H,Senegal,Japan,0.523,0.249,0.228,Home Win
-48,H,Chile,Japan,0.19,0.117,0.693,Away Win
-49,I,France,Nigeria,0.586,0.253,0.161,Home Win
-50,I,France,Bolivia,0.623,0.27,0.107,Home Win
-51,I,France,Slovakia,0.623,0.27,0.107,Home Win
-52,I,Nigeria,Bolivia,0.573,0.248,0.179,Home Win
-53,I,Nigeria,Slovakia,0.583,0.2,0.216,Home Win
-54,I,Bolivia,Slovakia,0.258,0.252,0.49,Away Win
-55,J,Argentina,Jordan,0.586,0.253,0.161,Home Win
-56,J,Argentina,Kenya,0.704,0.195,0.101,Home Win
-57,J,Argentina,New Zealand,0.704,0.195,0.101,Home Win
-58,J,Jordan,Kenya,0.531,0.253,0.217,Home Win
-59,J,Jordan,New Zealand,0.523,0.249,0.228,Home Win
-60,J,Kenya,New Zealand,0.238,0.259,0.504,Away Win
-61,K,Netherlands,Costa Rica,0.623,0.27,0.107,Home Win
-62,K,Netherlands,Iran,0.608,0.202,0.19,Home Win
-63,K,Netherlands,Ghana,0.697,0.143,0.16,Home Win
-64,K,Costa Rica,Iran,0.238,0.259,0.504,Away Win
-65,K,Costa Rica,Ghana,0.272,0.211,0.517,Away Win
-66,K,Iran,Ghana,0.579,0.192,0.229,Home Win
-67,L,England,Honduras,0.665,0.24,0.095,Home Win
-68,L,England,Saudi Arabia,0.623,0.27,0.107,Home Win
-69,L,England,Panama,0.742,0.152,0.106,Home Win
-70,L,Honduras,Saudi Arabia,0.258,0.252,0.49,Away Win
-71,L,Honduras,Panama,0.551,0.208,0.24,Home Win
-72,L,Saudi Arabia,Panama,0.635,0.156,0.21,Home Win
+match,group,home_team,away_team,p_home_win,p_draw,p_away_win,predicted
+1,A,Mexico,South Africa,0.675,0.205,0.12,Home
+2,A,Mexico,South Korea,0.549,0.233,0.218,Home
+3,A,Mexico,Czechia,0.596,0.24,0.164,Home
+4,A,South Africa,South Korea,0.161,0.268,0.571,Away
+5,A,South Africa,Czechia,0.346,0.264,0.39,Away
+6,A,South Korea,Czechia,0.508,0.283,0.209,Home
+7,B,Canada,Bosnia and Herzegovina,0.593,0.252,0.156,Home
+8,B,Canada,Qatar,0.659,0.224,0.117,Home
+9,B,Canada,Switzerland,0.222,0.272,0.506,Away
+10,B,Bosnia and Herzegovina,Qatar,0.458,0.274,0.268,Home
+11,B,Bosnia and Herzegovina,Switzerland,0.164,0.231,0.605,Away
+12,B,Qatar,Switzerland,0.168,0.211,0.621,Away
+13,C,Brazil,Morocco,0.616,0.217,0.167,Home
+14,C,Brazil,Haiti,0.699,0.193,0.108,Home
+15,C,Brazil,Scotland,0.675,0.205,0.12,Home
+16,C,Morocco,Haiti,0.675,0.205,0.12,Home
+17,C,Morocco,Scotland,0.62,0.249,0.13,Home
+18,C,Haiti,Scotland,0.164,0.231,0.605,Away
+19,D,United States,Paraguay,0.583,0.248,0.169,Home
+20,D,United States,Australia,0.583,0.248,0.169,Home
+21,D,United States,Turkey,0.549,0.233,0.218,Home
+22,D,Paraguay,Australia,0.295,0.295,0.41,Away
+23,D,Paraguay,Turkey,0.279,0.262,0.459,Away
+24,D,Australia,Turkey,0.422,0.271,0.306,Home
+25,E,Germany,Curaçao,0.699,0.193,0.108,Home
+26,E,Germany,Ivory Coast,0.675,0.205,0.12,Home
+27,E,Germany,Ecuador,0.675,0.205,0.12,Home
+28,E,Curaçao,Ivory Coast,0.164,0.231,0.605,Away
+29,E,Curaçao,Ecuador,0.168,0.211,0.621,Away
+30,E,Ivory Coast,Ecuador,0.214,0.262,0.524,Away
+31,F,Netherlands,Japan,0.503,0.222,0.275,Home
+32,F,Netherlands,Sweden,0.675,0.205,0.12,Home
+33,F,Netherlands,Tunisia,0.675,0.205,0.12,Home
+34,F,Japan,Sweden,0.525,0.198,0.277,Home
+35,F,Japan,Tunisia,0.675,0.205,0.12,Home
+36,F,Sweden,Tunisia,0.466,0.261,0.273,Home
+37,G,Belgium,Egypt,0.675,0.205,0.12,Home
+38,G,Belgium,Iran,0.675,0.205,0.12,Home
+39,G,Belgium,New Zealand,0.699,0.193,0.108,Home
+40,G,Egypt,Iran,0.385,0.281,0.334,Home
+41,G,Egypt,New Zealand,0.624,0.247,0.129,Home
+42,G,Iran,New Zealand,0.624,0.247,0.129,Home
+43,H,Spain,Cabo Verde,0.699,0.193,0.108,Home
+44,H,Spain,Saudi Arabia,0.695,0.192,0.113,Home
+45,H,Spain,Uruguay,0.616,0.217,0.167,Home
+46,H,Cabo Verde,Saudi Arabia,0.165,0.266,0.568,Away
+47,H,Cabo Verde,Uruguay,0.164,0.231,0.605,Away
+48,H,Saudi Arabia,Uruguay,0.161,0.268,0.571,Away
+49,I,France,Senegal,0.675,0.205,0.12,Home
+50,I,France,Iraq,0.695,0.192,0.113,Home
+51,I,France,Norway,0.616,0.217,0.167,Home
+52,I,Senegal,Iraq,0.583,0.248,0.169,Home
+53,I,Senegal,Norway,0.236,0.289,0.475,Away
+54,I,Iraq,Norway,0.164,0.231,0.605,Away
+55,J,Argentina,Algeria,0.687,0.198,0.116,Home
+56,J,Argentina,Austria,0.642,0.226,0.132,Home
+57,J,Argentina,Jordan,0.699,0.193,0.108,Home
+58,J,Algeria,Austria,0.161,0.268,0.571,Away
+59,J,Algeria,Jordan,0.295,0.295,0.41,Away
+60,J,Austria,Jordan,0.679,0.206,0.115,Home
+61,K,Portugal,DR Congo,0.717,0.172,0.11,Home
+62,K,Portugal,Uzbekistan,0.675,0.205,0.12,Home
+63,K,Portugal,Colombia,0.616,0.217,0.167,Home
+64,K,DR Congo,Uzbekistan,0.164,0.231,0.605,Away
+65,K,DR Congo,Colombia,0.164,0.231,0.605,Away
+66,K,Uzbekistan,Colombia,0.168,0.236,0.597,Away
+67,L,England,Croatia,0.616,0.217,0.167,Home
+68,L,England,Ghana,0.676,0.204,0.12,Home
+69,L,England,Panama,0.717,0.172,0.11,Home
+70,L,Croatia,Ghana,0.583,0.248,0.169,Home
+71,L,Croatia,Panama,0.675,0.205,0.12,Home
+72,L,Ghana,Panama,0.62,0.249,0.13,Home

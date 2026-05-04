@@ -1,24 +1,14 @@
 """src/simulate.py — WC2026 group stage + knockout bracket Monte Carlo simulation."""
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
 from itertools import combinations
 
-RNG = np.random.default_rng(42)
+from wc2026_groups import WC2026_GROUPS
+from features import FEATURE_COLS
 
-WC2026_GROUPS = {
-    "A": ["Mexico","South Africa","South Korea","Czechia"],
-    "B": ["Canada","Bosnia and Herzegovina","Qatar","Switzerland"],
-    "C": ["Brazil","Morocco","Haiti","Scotland"],
-    "D": ["United States","Paraguay","Australia","Turkey"],
-    "E": ["Germany","Cuba","Ivory Coast","Ecuador"],
-    "F": ["Portugal","Indonesia","Algeria","Croatia"],
-    "G": ["Belgium","Egypt","Venezuela","Colombia"],
-    "H": ["Spain","Senegal","Chile","Japan"],
-    "I": ["France","Nigeria","Bolivia","Slovakia"],
-    "J": ["Argentina","Jordan","Kenya","New Zealand"],
-    "K": ["Netherlands","Costa Rica","Iran","Ghana"],
-    "L": ["England","Honduras","Saudi Arabia","Panama"],
-}
+RNG = np.random.default_rng(42)
 
 # WC2026 Round of 32 bracket (simplified — winner/runner-up pairings)
 # Format: (GroupX_1st, GroupY_2nd) — actual bracket depends on 3rd-place rankings
@@ -176,11 +166,9 @@ def build_probs_lookup(feature_df, ensemble, calibrators, squad_stats):
     Build a (teamA, teamB) -> (p_home, p_draw, p_away) lookup
     for all WC2026 match-ups using the trained model.
     """
-    from src.features import FEATURE_COLS
-    import pandas as pd
+    from model import predict_calibrated
 
     all_teams = [t for grp in WC2026_GROUPS.values() for t in grp]
-    sq = squad_stats.set_index("team") if not squad_stats.empty else pd.DataFrame()
 
     # Build feature rows for every possible match-up
     rows = []
@@ -228,10 +216,51 @@ def build_probs_lookup(feature_df, ensemble, calibrators, squad_stats):
         rows.append(row)
 
     X = pd.DataFrame(rows, columns=FEATURE_COLS).fillna(0)
-    from src.model import predict_calibrated
     probs_arr = predict_calibrated(ensemble, calibrators, X)
 
     lookup = {}
     for i, (ta, tb) in enumerate(pairs):
         lookup[(ta, tb)] = tuple(probs_arr[i])
     return lookup
+
+
+def main():
+    """Load trained models, build WC2026 probabilities, write outputs/."""
+    base = Path(__file__).resolve().parent.parent
+    data_dir = base / "data"
+    models_dir = base / "models"
+    out_dir = base / "outputs"
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    feature_df = pd.read_csv(data_dir / "merged_dataset.csv", parse_dates=["date"])
+    squad = pd.read_csv(data_dir / "04_squad_stats.csv")
+
+    from model import load_model
+
+    ensemble, calibrators = load_model(models_dir)
+    probs_lookup = build_probs_lookup(feature_df, ensemble, calibrators, squad)
+
+    from report import (
+        generate_all_group_matches,
+        generate_group_predictions,
+        plot_group_heatmap,
+        plot_winner_probabilities,
+    )
+
+    print("  Writing group-stage match predictions …")
+    group_matches = generate_all_group_matches(probs_lookup)
+    group_matches.to_csv(out_dir / "group_stage_predictions.csv", index=False)
+
+    print("  Simulating group qualification probabilities …")
+    group_preds = generate_group_predictions(probs_lookup, n_sims=8000)
+    group_preds.to_csv(out_dir / "group_qualification_probs.csv", index=False)
+
+    print("  Monte Carlo tournament winners …")
+    mc_results = monte_carlo(probs_lookup, n_simulations=12000)
+    mc_results.to_csv(out_dir / "tournament_winner_probabilities.csv", index=False)
+    mc_results.head(24).to_json(out_dir / "tournament_winner_odds.json", orient="records")
+
+    plot_winner_probabilities(mc_results, out_dir / "winner_odds.png")
+    plot_group_heatmap(group_preds, out_dir / "group_predictions.png")
+
+    print(f"  Outputs → {out_dir}")

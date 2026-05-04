@@ -1,15 +1,22 @@
 """src/model.py — XGBoost + CatBoost ensemble with walk-forward CV and calibration."""
-import numpy as np
-import pandas as pd
-from sklearn.calibration import CalibratedClassifierCV
-from sklearn.preprocessing import LabelEncoder
-from sklearn.isotonic import IsotonicRegression
-from sklearn.metrics import log_loss
-import xgboost as xgb
-import catboost as cb
 import pickle
 from pathlib import Path
-from src.features import FEATURE_COLS
+
+import catboost as cb
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.isotonic import IsotonicRegression
+from features import FEATURE_COLS
+
+# XGBoost requires OpenMP on macOS (`brew install libomp`). Defer import and fall back if unavailable.
+try:
+    import xgboost as xgb
+
+    HAVE_XGBOOST = True
+except Exception:
+    xgb = None
+    HAVE_XGBOOST = False
 
 
 def ranked_probability_score(y_true_int, probs):
@@ -58,34 +65,66 @@ def walk_forward_cv(df, feature_cols, n_splits=5):
     return pd.DataFrame(results)
 
 
-def build_ensemble(X_train, y_train, verbose=True):
-    """Train XGBoost + CatBoost ensemble."""
-    xgb_model = xgb.XGBClassifier(
-        n_estimators=500, max_depth=5, learning_rate=0.05,
-        subsample=0.8, colsample_bytree=0.8, min_child_weight=3,
-        reg_alpha=0.1, reg_lambda=1.0, objective="multi:softprob",
-        num_class=3, eval_metric="mlogloss", random_state=42,
-        verbosity=0,
+def _build_tree_model(verbose=True):
+    """Gradient boosting tree model; XGBoost if OpenMP/lib loads, else sklearn HGB."""
+    if HAVE_XGBOOST:
+        if verbose:
+            print("    Training XGBoost …")
+        return xgb.XGBClassifier(
+            n_estimators=500,
+            max_depth=5,
+            learning_rate=0.05,
+            subsample=0.8,
+            colsample_bytree=0.8,
+            min_child_weight=3,
+            reg_alpha=0.1,
+            reg_lambda=1.0,
+            objective="multi:softprob",
+            num_class=3,
+            eval_metric="mlogloss",
+            random_state=42,
+            verbosity=0,
+        )
+    if verbose:
+        print(
+            "    Training sklearn HistGradientBoosting (XGBoost unavailable — "
+            "on macOS install OpenMP: brew install libomp) …"
+        )
+    return HistGradientBoostingClassifier(
+        max_iter=400,
+        max_depth=5,
+        learning_rate=0.05,
+        l2_regularization=1.0,
+        random_state=42,
     )
+
+
+def build_ensemble(X_train, y_train, verbose=True):
+    """Train tree booster + CatBoost ensemble."""
+    tree_model = _build_tree_model(verbose=verbose)
     cb_model = cb.CatBoostClassifier(
-        iterations=500, depth=5, learning_rate=0.05,
-        l2_leaf_reg=3.0, random_seed=42,
-        loss_function="MultiClass", eval_metric="Accuracy",
+        iterations=500,
+        depth=5,
+        learning_rate=0.05,
+        l2_leaf_reg=3.0,
+        random_seed=42,
+        loss_function="MultiClass",
+        eval_metric="Accuracy",
         verbose=False,
     )
-    if verbose: print("    Training XGBoost …")
-    xgb_model.fit(X_train, y_train)
-    if verbose: print("    Training CatBoost …")
+    tree_model.fit(X_train, y_train)
+    if verbose:
+        print("    Training CatBoost …")
     cb_model.fit(X_train, y_train)
-    return {"xgb": xgb_model, "cb": cb_model}
+    return {"xgb": tree_model, "cb": cb_model}
 
 
 def predict_proba(ensemble, X):
-    """Ensemble prediction: average XGB and CB probabilities."""
+    """Ensemble prediction: average tree booster and CatBoost probabilities."""
     X = X.fillna(0)
-    p_xgb = ensemble["xgb"].predict_proba(X)
-    p_cb  = ensemble["cb"].predict_proba(X)
-    return (p_xgb + p_cb) / 2.0
+    p_tree = ensemble["xgb"].predict_proba(X)
+    p_cb = ensemble["cb"].predict_proba(X)
+    return (p_tree + p_cb) / 2.0
 
 
 def calibrate(ensemble, X_cal, y_cal):
@@ -140,10 +179,15 @@ def train_final_model(df, feature_cols, models_dir):
     with open(models_dir / "calibrators.pkl", "wb") as f:
         pickle.dump(calibrators, f)
 
-    # Feature importance
-    fi = pd.Series(
-        ensemble["xgb"].feature_importances_, index=feature_cols
-    ).sort_values(ascending=False)
+    # Feature importance (XGBoost / HGB may omit importances in some sklearn builds)
+    tree = ensemble["xgb"]
+    if hasattr(tree, "feature_importances_"):
+        fi = pd.Series(tree.feature_importances_, index=feature_cols)
+    else:
+        cb_imp = np.array(ensemble["cb"].get_feature_importance(), dtype=float)
+        cb_imp = cb_imp / cb_imp.sum() if cb_imp.sum() else cb_imp
+        fi = pd.Series(cb_imp, index=feature_cols)
+    fi = fi.sort_values(ascending=False)
     fi.to_csv(models_dir / "feature_importance.csv")
     print(f"  Models saved to {models_dir}")
     return ensemble, calibrators, fi

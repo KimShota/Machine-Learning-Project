@@ -8,66 +8,99 @@ Run this file to execute the full pipeline end-to-end:
 
 Usage:
   python run.py                     # full pipeline
-  python run.py --skip-data         # skip data generation (use existing CSVs)
-  python run.py --simulate-only     # only re-run tournament simulation
+  python run.py --skip-data         # skip raw CSV generation (use existing data/*.csv)
+  python run.py --skip-train        # skip training (needs models/ + merged_dataset.csv)
+  python run.py --simulate-only     # only re-run tournament simulation (needs models/)
 """
-import sys, os, time, argparse
+import argparse
+import sys
+import time
 from pathlib import Path
 
-BASE = Path(__file__).parent
+BASE = Path(__file__).parent.resolve()
 sys.path.insert(0, str(BASE / "src"))
+
+DATA_DIR = BASE / "data"
+MODELS_DIR = BASE / "models"
+OUTPUTS_DIR = BASE / "outputs"
+
 
 def banner(msg):
     print(f"\n{'='*62}\n  {msg}\n{'='*62}")
 
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--skip-data",      action="store_true", help="Skip data generation")
-    parser.add_argument("--skip-train",     action="store_true", help="Skip model training")
-    parser.add_argument("--simulate-only",  action="store_true", help="Only run simulation")
+    parser.add_argument("--skip-data", action="store_true", help="Skip synthetic raw CSV generation")
+    parser.add_argument("--skip-train", action="store_true", help="Skip model training & CV")
+    parser.add_argument("--simulate-only", action="store_true", help="Only run WC2026 simulation outputs")
     args = parser.parse_args()
 
     t0 = time.time()
-    print("\n" + "█"*62)
+    print("\n" + "█" * 62)
     print("  ⚽  WC2026 ML Prediction Pipeline")
-    print("  From raw data → trained model → 104-match predictions")
-    print("█"*62)
+    print("  From raw data → trained model → tournament predictions")
+    print("█" * 62)
 
-    # ── Step 1: Data ──────────────────────────────────────────────
-    if not args.skip_data and not args.simulate_only:
-        banner("Step 1 / 3  —  Data Generation")
-        import generate_data   # src/generate_data.py
-        # NOTE: On your machine, replace this with collect_wc2026_data.py
-        # which downloads real data from Kaggle, eloratings.net, etc.
-        print("  ✓ Data ready in data/")
+    for d in (DATA_DIR, MODELS_DIR, OUTPUTS_DIR):
+        d.mkdir(parents=True, exist_ok=True)
 
-    # ── Step 2: Features + Training ───────────────────────────────
-    if not args.skip_train and not args.simulate_only:
-        banner("Step 2 / 3  —  Feature Engineering")
-        from features import build_features
-        build_features(save=True)
-        print("  ✓ Features engineered → data/merged_dataset.csv")
+    if args.simulate_only:
+        banner("WC2026 Predictions (simulation only)")
+        from simulate import main as sim_main
 
-        banner("Step 3 / 3  —  Model Training (Walk-Forward CV)")
-        from train import main as train_main
-        train_main()
-        print("  ✓ Models saved → models/")
+        sim_main()
+    else:
+        if not args.skip_data:
+            banner("Step 1 / 4  —  Data Generation")
+            from generate_data import build_and_save_all
 
-    # ── Step 3: Simulate ──────────────────────────────────────────
-    banner("Generating WC2026 Predictions")
-    from simulate import main as sim_main
-    sim_main()
+            build_and_save_all(DATA_DIR)
+            print("  ✓ Raw CSVs → data/")
+
+        if not args.skip_train:
+            banner("Step 2 / 4  —  Feature Engineering")
+            from features import FEATURE_COLS, build_features
+
+            build_features(save=True, data_dir=DATA_DIR)
+            print("  ✓ merged_dataset.csv ready")
+
+            banner("Step 3 / 4  —  Model Training (walk-forward CV + calibration)")
+            import pandas as pd
+            from model import train_final_model, walk_forward_cv
+            from report import plot_cv_results, plot_feature_importance
+
+            df = pd.read_csv(DATA_DIR / "merged_dataset.csv", parse_dates=["date"])
+            cv_df = walk_forward_cv(df, FEATURE_COLS, n_splits=5)
+            cv_df.to_csv(OUTPUTS_DIR / "cv_results.csv", index=False)
+            plot_cv_results(cv_df, OUTPUTS_DIR / "cv_results.png")
+
+            _, _, fi = train_final_model(df, FEATURE_COLS, MODELS_DIR)
+            plot_feature_importance(fi, OUTPUTS_DIR / "feature_importance.png")
+            print("  ✓ Models → models/")
+        elif not args.skip_data:
+            banner("Step 2 / 4  —  Feature Engineering (no training)")
+            from features import build_features
+
+            build_features(save=True, data_dir=DATA_DIR)
+
+        banner("Step 4 / 4  —  WC2026 Match & Tournament Simulation")
+        from simulate import main as sim_main
+
+        sim_main()
 
     elapsed = time.time() - t0
     print(f"\n{'█'*62}")
-    print(f"  ✓ Full pipeline complete in {elapsed:.0f}s")
-    print(f"  Key outputs:")
-    print(f"    outputs/group_stage_predictions.csv  — all 72 group matches")
-    print(f"    outputs/tournament_winner_odds.json  — winner probabilities")
-    print(f"    outputs/winner_odds.png              — top 20 chart")
-    print(f"    outputs/group_predictions.png        — group heatmaps")
-    print(f"    outputs/feature_importance.png       — model explainability")
-    print(f"    outputs/cv_results.png               — model performance")
+    print(f"  ✓ Complete in {elapsed:.0f}s")
+    print("  Key outputs:")
+    print(f"    {OUTPUTS_DIR}/group_stage_predictions.csv")
+    print(f"    {OUTPUTS_DIR}/group_qualification_probs.csv")
+    print(f"    {OUTPUTS_DIR}/tournament_winner_probabilities.csv")
+    print(f"    {OUTPUTS_DIR}/tournament_winner_odds.json")
+    print(f"    {OUTPUTS_DIR}/winner_odds.png")
+    print(f"    {OUTPUTS_DIR}/group_predictions.png")
+    print(f"    {OUTPUTS_DIR}/feature_importance.png")
+    print(f"    {OUTPUTS_DIR}/cv_results.png")
     print(f"{'█'*62}\n")
 
 

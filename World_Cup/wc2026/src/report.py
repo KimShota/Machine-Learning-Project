@@ -8,20 +8,7 @@ import matplotlib.patches as mpatches
 from pathlib import Path
 from itertools import combinations
 
-WC2026_GROUPS = {
-    "A":["Mexico","South Africa","South Korea","Czechia"],
-    "B":["Canada","Bosnia and Herzegovina","Qatar","Switzerland"],
-    "C":["Brazil","Morocco","Haiti","Scotland"],
-    "D":["United States","Paraguay","Australia","Turkey"],
-    "E":["Germany","Cuba","Ivory Coast","Ecuador"],
-    "F":["Portugal","Indonesia","Algeria","Croatia"],
-    "G":["Belgium","Egypt","Venezuela","Colombia"],
-    "H":["Spain","Senegal","Chile","Japan"],
-    "I":["France","Nigeria","Bolivia","Slovakia"],
-    "J":["Argentina","Jordan","Kenya","New Zealand"],
-    "K":["Netherlands","Costa Rica","Iran","Ghana"],
-    "L":["England","Honduras","Saudi Arabia","Panama"],
-}
+from wc2026_groups import WC2026_GROUPS
 
 CONF_COLORS = {
     "UEFA":"#3B82F6","CONMEBOL":"#10B981","CAF":"#F59E0B",
@@ -41,12 +28,14 @@ TEAM_CONF = {
     "Costa Rica":"CONCACAF","Honduras":"CONCACAF","Kenya":"CAF","Panama":"CONCACAF",
     "Bosnia and Herzegovina":"UEFA","Qatar":"AFC","Haiti":"CONCACAF","Cuba":"CONCACAF",
     "Trinidad and Tobago":"CONCACAF","Algeria":"CAF",
+    "Curaçao":"CONCACAF","Tunisia":"CAF","Cabo Verde":"CAF","Sweden":"UEFA",
+    "Iraq":"AFC","Austria":"UEFA","DR Congo":"CAF","Uzbekistan":"AFC","Norway":"UEFA",
 }
 
 
 def generate_group_predictions(probs_lookup, n_sims=20000):
     """Simulate group stage n_sims times to get qualification probabilities."""
-    from src.simulate import simulate_group
+    from simulate import simulate_group
     qual_counts = {t:{"1st":0,"2nd":0,"3rd":0,"4th":0} for grp in WC2026_GROUPS.values() for t in grp}
     for _ in range(n_sims):
         for grp, teams in WC2026_GROUPS.items():

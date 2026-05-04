@@ -56,27 +56,21 @@ TEAMS = {
     "Honduras":              (1420, 48, "CONCACAF", 0.9),
     "Kenya":                 (1400, 49, "CAF",      0.9),
     "Panama":                (1390, 50, "CONCACAF", 0.9),
+    "Curaçao":               (1335, 47, "CONCACAF", 0.9),
+    "Tunisia":               (1645, 31, "CAF",      1.0),
+    "Cabo Verde":            (1520, 36, "CAF",      0.95),
+    "Sweden":                (1825, 24, "UEFA",     1.2),
+    "Iraq":                  (1565, 55, "AFC",      1.0),
+    "Austria":               (1860, 12, "UEFA",     1.3),
+    "DR Congo":              (1495, 48, "CAF",      0.95),
+    "Uzbekistan":            (1680, 63, "AFC",      1.05),
+    "Norway":                (1875, 20, "UEFA",     1.35),
     "Bosnia and Herzegovina":(1380, 51, "UEFA",     1.0),
     "Qatar":                 (1360, 52, "AFC",      0.8),
     "Haiti":                 (1340, 53, "CONCACAF", 0.8),
     "Cuba":                  (1310, 54, "CONCACAF", 0.8),
     "Trinidad and Tobago":   (1290, 55, "CONCACAF", 0.8),
     "Algeria":               (1530, 28, "CAF",      1.0),
-}
-
-WC2026_GROUPS = {
-    "A": ["Mexico", "South Africa", "South Korea", "Czechia"],
-    "B": ["Canada", "Bosnia and Herzegovina", "Qatar", "Switzerland"],
-    "C": ["Brazil", "Morocco", "Haiti", "Scotland"],
-    "D": ["United States", "Paraguay", "Australia", "Turkey"],
-    "E": ["Germany", "Cuba", "Ivory Coast", "Ecuador"],
-    "F": ["Portugal", "Indonesia", "Algeria", "Croatia"],
-    "G": ["Belgium", "Egypt", "Venezuela", "Colombia"],
-    "H": ["Spain", "Senegal", "Chile", "Japan"],
-    "I": ["France", "Nigeria", "Bolivia", "Slovakia"],
-    "J": ["Argentina", "Jordan", "Kenya", "New Zealand"],
-    "K": ["Netherlands", "Costa Rica", "Iran", "Ghana"],
-    "L": ["England", "Honduras", "Saudi Arabia", "Panama"],
 }
 
 def elo_win_prob(elo_a, elo_b, home_adv=0.0):
